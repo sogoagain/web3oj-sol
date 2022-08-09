@@ -5,7 +5,7 @@ interface IPlusCalculator {
     function plus(uint256, uint256) external pure returns (uint256);
 }
 
-contract PlusCalculatorProblem{
+contract PlusCalculatorProblem {
     IPlusCalculator public plusCalculator;
 
     function setPlusCalculator(address _plusCalculator) public {

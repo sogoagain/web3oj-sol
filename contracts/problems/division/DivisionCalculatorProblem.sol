@@ -7,7 +7,7 @@ interface IDivisionCalculator {
     function divide(uint256, uint256) external pure returns (uint256);
 }
 
-contract DivisionCalculatorProblem{
+contract DivisionCalculatorProblem {
     IDivisionCalculator public divisionCalculator;
 
     function setDivisionCalculator(address _divisionCalculator) public {

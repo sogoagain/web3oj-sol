@@ -7,7 +7,7 @@ interface IMinusCalculator {
     function minus(uint256, uint256) external pure returns (uint256);
 }
 
-contract MinusCalculatorProblem{
+contract MinusCalculatorProblem {
     IMinusCalculator public minusCalculator;
 
     function setMinusCalculator(address _minusCalculator) public {

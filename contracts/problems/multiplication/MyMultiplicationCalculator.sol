@@ -6,7 +6,12 @@ interface IMultiplicationCalculator {
 }
 
 contract MyMultiplicationCalculator is IMultiplicationCalculator {
-    function multiply(uint256 input1, uint256 input2) override public pure returns (uint256){
+    function multiply(uint256 input1, uint256 input2)
+        public
+        pure
+        override
+        returns (uint256)
+    {
         return input1 * input2;
     }
 }

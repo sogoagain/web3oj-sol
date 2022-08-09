@@ -7,10 +7,14 @@ interface IMultiplicationCalculator {
     function multiply(uint256, uint256) external pure returns (uint256);
 }
 
-contract MultiplicationCalculatorProblem{
+contract MultiplicationCalculatorProblem {
     IMultiplicationCalculator public multiplicationCalculator;
 
-    function setMultiplicationCalculator(address _multiplicationCalculator) public {
-        multiplicationCalculator = IMultiplicationCalculator(_multiplicationCalculator);
+    function setMultiplicationCalculator(address _multiplicationCalculator)
+        public
+    {
+        multiplicationCalculator = IMultiplicationCalculator(
+            _multiplicationCalculator
+        );
     }
 }
