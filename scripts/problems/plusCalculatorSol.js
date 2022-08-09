@@ -2,20 +2,18 @@ const { ethers } = require("hardhat");
 const hre = require("hardhat");
 
 async function calculatorSol() {
-  const [myAccount] = await ethers.getSigners();
-
-  const MyPlusCalculator = await ethers.getContractFactory("MyPlusCalculator");
-  const myPlusCalculator = await MyPlusCalculator.connect(myAccount).deploy();
-  await myPlusCalculator.deployed();
-
   const instance = "0x68f20a1350837741c689129EDf9212d49813A15F";
-  const PlusCalculatorProblem = await ethers.getContractFactory(
-    "PlusCalculatorProblem"
-  );
-  const plusCalculatorProblem = PlusCalculatorProblem.attach(instance);
-  const result = await plusCalculatorProblem
+  const interface = await ethers.getContractFactory("PlusCalculatorProblem");
+  const implementation = await ethers.getContractFactory("MyPlusCalculator");
+
+  const [myAccount] = await ethers.getSigners();
+  const deploy = await implementation.connect(myAccount).deploy();
+  await deploy.deployed();
+
+  const contract = interface.attach(instance);
+  const result = await contract
     .connect(myAccount)
-    .setPlusCalculator(myPlusCalculator.address);
+    .setPlusCalculator(deploy.address);
   console.log(result);
 }
 
