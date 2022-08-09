@@ -7,6 +7,6 @@ interface IMinusCalculator {
 
 contract MyMinusCalculator is IMinusCalculator {
     function minus(uint256 input1, uint256 input2) override public pure returns (uint256){
-        // TODO
+        return input1 - input2;
     }
 }
