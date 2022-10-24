@@ -32,16 +32,10 @@ module.exports = {
     },
   },
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    // rinkeby
-    rinkeby: {
-      url: process.env.RINKEBY_URL || "https://rinkeby.infura.io/v3/",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // goerli 추가
+    goerli: {
+      url: process.env.GOERLI_URL,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   gasReporter: {
