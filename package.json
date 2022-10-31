@@ -3,7 +3,8 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,ts,json}\"",
     "lint": "eslint --ext js .",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "submit": "npx hardhat --network goerli run"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",

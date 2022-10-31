@@ -33,6 +33,8 @@ module.exports = {
     goerli: {
       url: process.env.GOERLI_URL,
       accounts: [process.env.PRIVATE_KEY],
+      gas: 2100000,
+      gasPrice: 8000000000,
     },
   },
   gasReporter: {
