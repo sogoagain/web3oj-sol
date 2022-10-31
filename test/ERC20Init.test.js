@@ -17,7 +17,7 @@ describe("ERC20Init", function () {
     );
     const web3OnlineJudgeToken = await Web3OnlineJudgeToken.connect(
       owner
-    ).deploy(owner.address);
+    ).deploy();
     await web3OnlineJudgeToken.deployed();
 
     const problem = ERC20Init.attach(instance);
@@ -27,7 +27,7 @@ describe("ERC20Init", function () {
   }
 
   describe("Deployment", function () {
-    it("owner가 WEB3OJT 토큰 20억개를 모두 가지고 있다.", async function () {
+    it("owner가 WEB3OJT 토큰 20억개를 모두 가지고 있다", async function () {
       const { web3OnlineJudgeToken, owner } = await loadFixture(
         deployERC20InitFixture
       );
