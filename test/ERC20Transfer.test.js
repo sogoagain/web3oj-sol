@@ -38,7 +38,7 @@ describe("ERC20Transfer", function () {
 
       const balance = await web3OnlineJudgeToken.balanceOf(owner.address);
 
-      expect(balance).to.equal("1999999999999999999999999980");
+      expect(balance).to.equal("1999999980000000000000000000");
     });
 
     it("owner가 WEB3OJT 토큰 20개를 문제 인스턴스에 전송한다", async function () {
