@@ -19,4 +19,18 @@ module.exports = {
       globals: { task: true },
     },
   ],
+  rules: {
+    "node/no-extraneous-require": [
+      "error",
+      {
+        allowModules: ["@nomicfoundation/hardhat-network-helpers", "chai"],
+      },
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        varsIgnorePattern: "hre",
+      },
+    ],
+  },
 };
