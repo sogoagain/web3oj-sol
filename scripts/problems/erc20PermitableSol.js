@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 const hre = require("hardhat");
 
-async function web3OJTPermitableSol() {
+async function erc20PermitableSol() {
   const instance = "0x2C62497208C6560F41eb96447f3c3fBFeec36be5";
 
   const Web3OJTPermitable = await ethers.getContractFactory(
@@ -72,7 +72,7 @@ async function web3OJTPermitableSol() {
 }
 
 async function main() {
-  web3OJTPermitableSol();
+  erc20PermitableSol();
 }
 
 main().catch((error) => {
